@@ -26,3 +26,8 @@ poetry run python main.py
 ## Tests
 
 The tests are located in `/tests/` directory
+
+You can also run all tests at once using 
+```
+poetry run python run_tests.py
+```
