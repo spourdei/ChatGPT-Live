@@ -1,5 +1,7 @@
 import subprocess
 import os
+from security import safe_command
+
 # Script written by CHATGPT
 # Define the directory where pytest scripts are located
 tests_directory = "./tests"
@@ -21,7 +23,7 @@ for script in pytest_scripts:
     print(f"Running pytest script: {script}")
 
     # Run the pytest script using subprocess
-    current_result = subprocess.run(["pytest", script])
+    current_result = safe_command.run(subprocess.run, ["pytest", script])
 
     # Check the return code to determine success or failure
     if current_result.returncode == 0:
