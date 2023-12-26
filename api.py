@@ -34,7 +34,7 @@ def perform_openai_request(prompt: str, knowledge: str) -> OpenAiResponse:
                 "role": "user",
                 "content": f"You are a helpful assistant. Answer {prompt}."
                 f" Use your own knowledge and the following: {knowledge}."
-                f" Override your own knowledge with the provided prompt if there is a clash",
+                " Override your own knowledge with the provided prompt if there is a clash",
             },
         ],
     )
